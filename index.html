@@ -9,6 +9,80 @@
   <meta name="author" content="Guarapari Imóveis">
 
   <style>
+    
+    #iframe-wrapper {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      max-width: 400px;
+      height: 50vh; /* Altura relativa no desktop */
+      max-height: 400px;
+      z-index: 9999;
+      border-radius: 10px 0 0 0;
+      box-shadow: -2px -2px 12px rgba(0,0,0,0.3);
+      background-color: #fff;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #iframe-fixo {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px 0 0 0;
+      display: block;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      line-height: 32px;
+      text-align: center;
+      z-index: 10000;
+      display: none; /* Escondido inicialmente */
+      transition: background-color 0.3s ease;
+    }
+
+    #close-btn:hover {
+      background: rgba(255, 0, 0, 0.8);
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      #iframe-wrapper {
+        max-width: 100%;
+        height: 400px; /* Altura fixa menor */
+        border-radius: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      #iframe-fixo {
+        border-radius: 0;
+      }
+
+      #close-btn {
+        top: 6px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
     :root {
       --cor-primaria: #0077b6;
       --cor-secundaria: #00b4d8;
@@ -193,8 +267,384 @@
         <h3>Atualidade – Mercado imobiliário em alta</h3>
         <p>Guarapari vive uma forte valorização de imóveis, com lançamentos modernos e investimentos em infraestrutura à beira-mar.</p>
       </div>
+
+
+
+      <div class="event">
+  <h3>10 de junho de 2025 – Guarapari recebe 6 novos médicos para fortalecer a saúde no município</h3>
+  <p>O município de Guarapari recebeu seis novos médicos para reforçar a saúde local, visando melhorar o atendimento à população.</p>
+</div>
+
+<div class="event">
+  <h3>9 de junho de 2025 – Prefeitura de Guarapari realiza Dia D de Vacinação contra a Influenza</h3>
+  <p>Campanha de vacinação contra a gripe foi realizada em Guarapari, com ações em diversos pontos da cidade.</p>
+</div>
+
+<div class="event">
+  <h3>8 de junho de 2025 – Festival “A Moqueca é Aqui” movimenta Guarapari e fortalece economia local</h3>
+  <p>Evento gastronômico celebrando a culinária capixaba atraiu turistas e impulsionou o comércio local.</p>
+</div>
+
+<div class="event">
+  <h3>7 de junho de 2025 – Guarapari inicia campanha de Vacinação nas Escolas Municipais</h3>
+  <p>Campanha de vacinação contra doenças foi iniciada nas escolas municipais de Guarapari.</p>
+</div>
+
+<div class="event">
+  <h3>6 de junho de 2025 – Guarapari é destaque com projeto inovador de saúde para adolescentes</h3>
+  <p>Projeto de saúde voltado para adolescentes foi apresentado na Mostra "Aqui tem SUS".</p>
+</div>
+
+<div class="event">
+  <h3>5 de junho de 2025 – Guarapari retoma Programa Nosso Crédito e fortalece apoio aos empreendedores</h3>
+  <p>Programa de microcrédito foi retomado, oferecendo apoio financeiro a pequenos empreendedores locais.</p>
+</div>
+
+<div class="event">
+  <h3>4 de junho de 2025 – Guarapari entre as 8 cidades que mais geraram emprego este ano</h3>
+  <p>Estudo apontou Guarapari como uma das cidades capixabas com maior geração de empregos em 2025.</p>
+</div>
+
+<div class="event">
+  <h3>3 de junho de 2025 – Prefeitura apresenta Centro POP e cria Comitê para a população em situação de rua</h3>
+  <p>Centro de Referência foi inaugurado para atender pessoas em situação de rua, oferecendo serviços e apoio.</p>
+</div>
+
+<div class="event">
+  <h3>2 de junho de 2025 – Casagrande lança obras e leva telemedicina a Guarapari</h3>
+  <p>Governo do Estado anunciou investimentos em infraestrutura e serviços de saúde, incluindo telemedicina.</p>
+</div>
+
+<div class="event">
+  <h3>1 de junho de 2025 – Prefeitura de Guarapari reforça proibição de churrascos nas praias após acidente com turistas</h3>
+  <p>Medida visa garantir a segurança dos frequentadores das praias após incidente recente.</p>
+</div>
+
+<div class="event">
+  <h3>31 de maio de 2025 – Guarapari celebra a magia da Páscoa com shows nacionais e desfile temático</h3>
+  <p>Evento de Páscoa contou com apresentações culturais e desfile, atraindo grande público.</p>
+</div>
+
+<div class="event">
+  <h3>30 de maio de 2025 – Guarapari inaugura moderno Centro de Educação Infantil com capacidade para 356 alunos</h3>
+  <p>Nova unidade de ensino foi inaugurada, ampliando a oferta de vagas para crianças na cidade.</p>
+</div>
+
+<div class="event">
+  <h3>29 de maio de 2025 – Música ao vivo de volta aos quiosques da Praia do Morro após mais de 10 anos</h3>
+  <p>Após uma década, apresentações musicais retornaram aos quiosques da Praia do Morro, revitalizando o local.</p>
+</div>
+
+<div class="event">
+  <h3>28 de maio de 2025 – Guarapari entrega revitalização da Praça João Marques Pereira em Muquiçaba</h3>
+  <p>Praça foi reformada, oferecendo um espaço mais agradável para a comunidade local.</p>
+</div>
+
+<div class="event">
+  <h3>27 de maio de 2025 – Guarapari avança na proteção à infância e adolescência com implantação do SIPIA</h3>
+  <p>Sistema de Informação foi implantado para fortalecer a rede de proteção a crianças e adolescentes.</p>
+</div>
+
+<div class="event">
+  <h3>26 de maio de 2025 – Guarapari se prepara para sediar competições nacionais de automobilismo</h3>
+  <p>Cidade se prepara para receber eventos esportivos de grande porte, movimentando o turismo e a economia local.</p>
+</div>
+
+<div class="event">
+  <h3>25 de maio de 2025 – Prefeitura de Guarapari garante pagamento integral do terço de férias para professores efetivos</h3>
+  <p>Medida beneficia profissionais da educação, garantindo direitos trabalhistas.</p>
+</div>
+
+<div class="event">
+  <h3>24 de maio de 2025 – Guarapari promove debate sobre Envelhecimento Multicultural e Democracia</h3>
+  <p>Evento discutiu políticas públicas voltadas para a população idosa, promovendo inclusão e cidadania.</p>
+</div>
+
+<div class="event">
+  <h3>23 de maio de 2025 – Guarapari retoma atividades do Programa Saúde do Idoso com mais de 300 inscritos</h3>
+  <p>Programa de saúde para idosos foi retomado, oferecendo atividades físicas e acompanhamento médico.</p>
+</div>
+
+<div class="event">
+  <h3>22 de maio de 2025 – Guarapari avança na proteção à infância e adolescência com implantação do SIPIA</h3>
+  <p>Sistema de Informação foi implantado para fortalecer a rede de proteção a crianças e adolescentes.</p>
+</div>
+
+<div class="event">
+  <h3>21 de maio de 2025 – Guarapari se prepara para sediar competições nacionais de automobilismo</h3>
+  <p>Cidade se prepara para receber eventos esportivos de grande porte, movimentando o turismo e a economia local.</p>
+</div>
+
+<div class="event">
+  <h3>20 de maio de 2025 – Prefeitura de Guarapari garante pagamento integral do terço de férias para professores efetivos</h3>
+  <p>Medida beneficia profissionais da educação, garantindo direitos trabalhistas.</p>
+</div>
+
+<div class="event">
+  <h3>19 de maio de 2025 – Guarapari promove debate sobre Envelhecimento Multicultural e Democracia</h3>
+  <p>Evento discutiu políticas públicas voltadas para a população idosa, promovendo inclusão e cidadania.</p>
+</div>
+
+<div class="event">
+  <h3>18 de maio de 2025 – Guarapari retoma atividades do Programa Saúde do Idoso com mais de 300 inscritos</h3>
+  <p>Programa de saúde para idosos foi retomado, oferecendo atividades físicas e acompanhamento médico.</p>
+</div>
+
+<div class="event">
+  <h3>17 de maio de 2025 – Guarapari avança na proteção à infância e adolescência com implantação do SIPIA</h3>
+  <p>Sistema de Informação foi implantado para fortalecer a rede de proteção a crianças e adolescentes.</p>
+</div>
+
+<div class="event">
+  <h3>16 de maio de 2025 – Guarapari se prepara para sediar competições nacionais de automobilismo</h3>
+  <p>Cidade se prepara para receber eventos esportivos de grande porte, movimentando o turismo e a economia local.</p>
+</div>
+
+<div class="event">
+  <h3>15 de maio de 2025 – Prefeitura de Guarapari garante pagamento integral do terço de férias para professores efetivos</h3>
+  <p>Medida beneficia profissionais da educação, garantindo direitos trabalhistas.</p>
+</div>
+
+<div class="event">
+  <h3>14 de maio de 2025 – Guarapari promove debate sobre Envelhecimento Multicultural e Democracia</h3>
+  <p>Evento discutiu políticas públicas voltadas para a população idosa, promovendo inclusão e cidadania.</p>
+</div>
+
+<div class="event">
+  <h3>13 de maio de 2025 – Guarapari retoma atividades do Programa Saúde do Idoso com mais de 300 inscritos</h3>
+  <p>Programa de saúde para idosos foi retomado, oferecendo atividades físicas e acompanhamento médico.</p>
+</div>
+
+<div class="event">
+  <h3>12 de maio de 2025 – Guarapari avança na proteção à infância e adolescência com implantação do SIPIA</h3>
+  <p>Sistema de Informação foi implantado para fortalecer a rede de proteção a crianças e adolescentes.</p>
+</div>
+
+<div class="event">
+  <h3>11 de maio de 2025 – Guarapari se prepara para sediar competições nacionais de automobilismo</h3>
+  <p>Cidade se prepara para receber eventos esportivos de grande porte, movimentando o turismo e a economia local.</p>
+</div>
+
+<div class="event">
+  <h3>10 de maio de 2025 – Prefeitura de Guarapari garante pagamento integral do terço de férias para professores efetivos</h3>
+  <p>Medida beneficia profissionais da educação, garantindo direitos trabalhistas.</p>
+</div>
+
+<div class="event">
+  <h3>9 de maio de 2025 – Guarapari promove debate sobre Envelhecimento Multicultural e Democracia</h3>
+  <p>Evento discutiu políticas públicas voltadas para a população idosa, promovendo inclusão e cidadania.</p>
+</div>
+
+<div class="event">
+  <h3>8 de maio de 2025 – Guarapari retoma atividades do Programa Saúde do Idoso com mais de 300 inscritos</h3>
+  <p>Programa de saúde para idosos foi retomado, oferecendo atividades físicas e acompanhamento médico.</p>
+</div>
+
+<section class="timeline">
+  <div class="event">
+    <h3>12 de junho de 2025 – Prefeitura firma acordo para melhorar atendimento à população em situação de rua</h3>
+    <p>Ação visa oferecer mais suporte e dignidade aos moradores em situação de rua em Guarapari.</p>
+  </div>
+
+  <div class="event">
+    <h3>12 de junho de 2025 – Estudantes recebem notebooks para ajudar na alfabetização em escola do interior</h3>
+    <p>Iniciativa busca melhorar a qualidade da educação nas escolas rurais do município.</p>
+  </div>
+
+  <div class="event">
+    <h3>11 de junho de 2025 – Guarapari inicia fase de testes com patinetes elétricos compartilhados</h3>
+    <p>Projeto visa oferecer uma alternativa sustentável e moderna de transporte na cidade.</p>
+  </div>
+
+  <div class="event">
+    <h3>11 de junho de 2025 – Ginásio do Polivalente recebe nova iluminação com mais de 30 refletores instalados</h3>
+    <p>Melhoria na infraestrutura esportiva para eventos e atividades comunitárias.</p>
+  </div>
+
+  <div class="event">
+    <h3>10 de junho de 2025 – Marco na saúde pública: Guarapari oferece coleta de exames laboratoriais direto nas unidades de saúde</h3>
+    <p>Facilidade no acesso a exames médicos para a população local.</p>
+  </div>
+
+  <div class="event">
+    <h3>10 de junho de 2025 – Prefeitura realiza levantamento oficial sobre pesca do camarão em Guarapari</h3>
+    <p>Ação busca regulamentar e apoiar a atividade pesqueira no município.</p>
+  </div>
+
+  <div class="event">
+    <h3>9 de junho de 2025 – Prefeitura de Guarapari realiza Dia D de Vacinação contra a Influenza</h3>
+    <p>Campanha de vacinação busca imunizar a população contra a gripe.</p>
+  </div>
+
+  <div class="event">
+    <h3>8 de junho de 2025 – Festival “A Moqueca é Aqui” movimenta Guarapari e fortalece economia local</h3>
+    <p>Evento gastronômico atrai turistas e promove a cultura capixaba.</p>
+  </div>
+
+  <div class="event">
+    <h3>8 de junho de 2025 – Guarapari inicia campanha de Vacinação nas Escolas Municipais</h3>
+    <p>Objetivo é imunizar estudantes contra diversas doenças.</p>
+  </div>
+
+  <div class="event">
+    <h3>7 de junho de 2025 – Guarapari recebe 6 novos médicos para fortalecimento da saúde no município</h3>
+    <p>Contratação visa melhorar o atendimento médico à população.</p>
+  </div>
+
+  <div class="event">
+    <h3>7 de junho de 2025 – Prefeitura de Guarapari reforça proibição de churrascos nas praias após acidente com turistas</h3>
+    <p>Medida visa garantir a segurança e bem-estar dos frequentadores das praias.</p>
+  </div>
+
+  <div class="event">
+    <h3>6 de junho de 2025 – Guarapari é destaque com projeto inovador de saúde para adolescentes na Mostra “Aqui tem SUS”</h3>
+    <p>Projeto busca atender às necessidades de saúde dos jovens no município.</p>
+  </div>
+
+  <div class="event">
+    <h3>6 de junho de 2025 – Guarapari retoma Programa Nosso Crédito e fortalece apoio aos empreendedores</h3>
+    <p>Iniciativa oferece suporte financeiro para pequenos negócios locais.</p>
+  </div>
+
+  <div class="event">
+    <h3>6 de junho de 2025 – Guarapari entre as 8 cidades que mais geraram emprego este ano, atraindo novos investimentos</h3>
+    <p>Indicativo de crescimento econômico e atração de investimentos para o município.</p>
+  </div>
+
+  <div class="event">
+    <h3>5 de junho de 2025 – Prefeitura apresenta Centro POP e cria Comitê para a população em situação de rua</h3>
+    <p>Centro de Referência oferece apoio e serviços para moradores de rua.</p>
+  </div>
+
+  <div class="event">
+    <h3>5 de junho de 2025 – Guarapari é contemplada com investimentos em infraestrutura e saúde</h3>
+    <p>Novos recursos serão aplicados em obras e serviços essenciais para a cidade.</p>
+  </div>
+
+  <div class="event">
+    <h3>4 de junho de 2025 – Guarapari realiza ação de limpeza e revitalização na Praia do Morro</h3>
+    <p>Objetivo é melhorar a qualidade ambiental e atratividade turística da praia.</p>
+  </div>
+
+  <div class="event">
+    <h3>3 de junho de 2025 – Guarapari recebe visita técnica de especialistas em turismo sustentável</h3>
+    <p>Objetivo é desenvolver práticas que promovam o turismo responsável e sustentável.</p>
+  </div>
+
+  <div class="event">
+    <h3>2 de junho de 2025 – Prefeitura de Guarapari lança programa de incentivo à agricultura urbana</h3>
+    <p>Iniciativa visa promover a produção local de alimentos e sustentabilidade.</p>
+  </div>
+
+  <div class="event">
+    <h3>1 de junho de 2025 – Guarapari realiza Semana de Conscientização sobre Preservação Ambiental</h3>
+    <p>Atividades educativas buscam engajar a comunidade na proteção do meio ambiente.</p>
+  </div>
+
+  <div class="event">
+    <h3>31 de maio de 2025 – Guarapari sedia Fórum Regional de Educação e Cultura</h3>
+    <p>Evento reúne educadores e gestores para discutir políticas públicas na área.</p>
+  </div>
+
+  <div class="event">
+    <h3>30 de maio de 2025 – Prefeitura de Guarapari inaugura novo Centro de Referência de Assistência Social (CRAS)</h3>
+    <p>Espaço oferece serviços de apoio e acolhimento à população em situação de vulnerabilidade.</p>
+  </div>
+
+  <div class="event">
+    <h3>29 de maio de 2025 – Guarapari realiza mutirão de combate ao mosquito Aedes aegypti</h3>
+    <p>Ação visa reduzir os focos do mosquito transmissor de doenças como dengue e zika.</p>
+  </div>
+
+  <div class="event">
+    <h3>28 de maio de 2025 – Prefeitura de Guarapari promove curso de capacitação para servidores públicos</h3>
+    <p>Objetivo é aprimorar o atendimento e a gestão pública no município.</p>
+  </div>
+
+  <div class="event">
+    <h3>27 de maio de 2025 – Guarapari realiza Feira de Artesanato e Gastronomia no Centro</h3>
+    <p>Evento promove a cultura local e atrai turistas para a cidade.</p>
+  </div>
+
+  <div class="event">
+    <h3>26 de maio de 2025 – Prefeitura de Guarapari lança programa de incentivo ao turismo rural</h3>
+    <p>Iniciativa visa valorizar as potencialidades do interior do município.</p>
+  </div>
+
+  <div class="event">
+    <h3>25 de maio de 2025 – Guarapari realiza ação de conscientização sobre segurança no trânsito</h3>
+    <p>Campanha educativa busca reduzir acidentes e promover comportamentos seguros.</p>
+  </div>
+
+  <div class="event">
+    <h3>24 de maio de 2025 – Prefeitura de Guarapari inaugura novo posto de saúde no bairro Adalberto Simão Nader</h3>
+    <p>Unidade oferece atendimento médico de qualidade à população local.</p>
+  </div>
+
+  <div class="event">
+    <h3>23 de maio de 2025 – Guarapari sedia seminário sobre empreendedorismo feminino</h3>
+    <p>Evento discute políticas públicas e estratégias para o fortalecimento da mulher no mercado de trabalho.</p>
+  </div>
+
+  <div class="event">
+    <h3>22 de maio de 2025 – Prefeitura de Guarapari realiza ação de combate à violência doméstica</h3>
+    <p>Campanha busca sensibilizar a população sobre os direitos das mulheres e formas de denúncia.</p>
+  </div>
+
+  <div class="event">
+    <h3>21 de maio de 2025 – Guarapari recebe visita de representantes do Ministério do Turismo</h3>
+    <p>Objetivo é discutir investimentos e estratégias para o desenvolvimento do turismo na cidade.</p>
+  </div>
+
+  <div class="event">
+    <h3>20 de maio de 2025 – Prefeitura de Guarapari lança programa de incentivo à leitura</h3>
+    <p>Iniciativa visa promover o hábito da leitura entre crianças e jovens do município.</p>
+  </div>
+
+  <div class="event">
+    <h3>19 de maio de 2025 – Guarapari realiza ação de limpeza e preservação ambiental na Lagoa Funda</h3>
+    <p>Atividade busca melhorar a qualidade ambiental e atratividade turística da região.</p>
+  </div>
+
+  <div class="event">
+    <h3>18 de maio de 2025 – Prefeitura de Guarapari inaugura novo Centro de Atendimento ao Turista</h3>
+    <p>Espaço oferece informações e suporte aos visitantes da cidade.</p>
+  </div>
+
+  <div class="event">
+    <h3>17 de maio de 2025 – Guarapari realiza mutirão de vacinação contra a febre amarela</h3>
+    <p>Objetivo é imunizar a população e prevenir surtos da doença.</p>
+  </div>
+
+
+ 
+
+ 
+
     </section>
   </main>
+
+<div id="iframe-wrapper" role="region" aria-label="Anúncio fixo">
+  <button id="close-btn" aria-label="Fechar anúncio">×</button>
+  <iframe
+    id="iframe-fixo"
+    src="https://remarkable-gelato-4db597.netlify.app/modeloanuncio.html"
+    title="Anúncio Fixo Responsivo"
+    loading="lazy"
+    ></iframe>
+</div>
+
+<script>
+  // Espera 10 segundos para exibir o botão de fechar
+  setTimeout(() => {
+    document.getElementById("close-btn").style.display = "block";
+  }, 10000);
+
+  // Ação do botão para fechar o iframe
+  document.getElementById("close-btn").addEventListener("click", () => {
+    document.getElementById("iframe-wrapper").style.display = "none";
+  });
+</script>
 
   <footer>
  
